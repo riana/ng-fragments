@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html ng-app="transitionsdemo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+    <!--<link rel="stylesheet" href="styles/ngFragments.css"/>-->
+    <!--<link rel="stylesheet" href="demo/demo.css"/>-->
+    <link rel="stylesheet" href="build/css/ngFragments.css"/>
+    <link rel="stylesheet" href="build/css/demo.css"/>
+</head>
+<body >
+
+<h1>Transitions demo</h1>
+<h2>List View Hero</h2>
+<ng-fragment-container id="ListHeroContainer" default-view="HeroListView" class="demo-zone z-depth-3" ng-controller="HeroDemoController">
+    <ng-fragment id="HeroListView"class="list-view visible">
+        <div id="hero_{{item.id}}" class="list-item" ng-repeat="item in ctrl.items">
+            <div class="paper-row h-flex">
+                <a hero-id="icon" ng-click="ctrl.selectItem(item)"
+                   hero hero-source="'hero_' + item.id" hero-push="'DetailView'"
+                   hero-container="ListHeroContainer">
+                    <img src="demo/res/profile-default.png" class="item-icon hero" hero-id="icon" alt=""/>
+                </a>
+                <span class="flex small-text item-text hero" hero-id="txt">{{item.label}}</span>
+            </div>
+        </div>
+    </ng-fragment>
+
+    <ng-fragment id="DetailView" class="detail-view">
+        <div class="detail-title-bar">
+            <a
+               hero hero-source="'DetailView'" hero-push="'hero_' + ctrl.selectedItem.id"
+               hero-container="ListHeroContainer">
+                <i class="fa fa-arrow-left detail-back-button"></i>
+            </a>
+            <span class="flex huge-text hero detail-title" hero-id="txt">{{ctrl.selectedItem.label}}</span>
+        </div>
+
+        <div class="flexbox-center">
+            <img src="demo/res/profile-default.png" class="detail-icon hero" hero-id="icon" alt=""/>
+        </div>
+        <div class="detail-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+        </div>
+    </ng-fragment>
+</ng-fragment-container>
+
+<h2>List View Slide</h2>
+
+
+<ng-fragment-container id="SlideContainer" default-view="SlideListView" class="demo-zone z-depth-3" ng-controller="HeroDemoController">
+
+    <ng-fragment id="SlideListView" class="list-view">
+        <div class="list-item" ng-repeat="item in ctrl.items">
+            <div class="paper-row h-flex">
+                <a ng-click="ctrl.selectItem(item)" slide-push="'SlideDetailsView'" slide-direction="'left'">
+                    <img src="demo/res/profile-default.png" class="item-icon" alt=""/>
+                </a>
+                <span class="flex small-text item-text">{{item.label}}</span>
+            </div>
+        </div>
+    </ng-fragment>
+
+    <ng-fragment id="SlideDetailsView" class="detail-view">
+        <div class="detail-title-bar">
+            <a slide-push="'SlideListView'" slide-direction="'right'">
+                <i class="fa fa-arrow-left detail-back-button"></i>
+            </a>
+            <span class="hero detail-title">{{ctrl.selectedItem.label}}</span>
+        </div>
+
+        <div class="flexbox-center">
+            <img src="demo/res/profile-default.png" class="detail-icon" alt=""/>
+        </div>
+        <div class="detail-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.
+            </p>
+        </div>
+    </ng-fragment>
+</ng-fragment-container>
+
+
+</body>
+
+<script src="bower_components/velocity/velocity.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<!--<script src="js/app.js"></script>-->
+<script src="build/js/ngFragments.js"></script>
+<script src="build/js/demo.js"></script>
+</html>

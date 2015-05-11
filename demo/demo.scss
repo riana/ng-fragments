@@ -1,0 +1,54 @@
+@import "flex-layout";
+@import "shadows";
+.demo-zone {
+  width:50%;
+  height: 300px;
+  margin: 0 auto;
+
+}
+
+.detail-view {
+  background: #ffff00;
+}
+
+.detail-back-button {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.detail-title {
+  font-size: 1.5em;
+}
+
+.detail-icon {
+  height: 150px;
+}
+
+.detail-text {
+  margin: 10px;
+}
+
+.list-view {
+  overflow: scroll;
+  //background: green;
+}
+
+
+.list-item {
+  padding: 10px;
+
+  border-bottom: 1px solid grey;
+  //&:nth-child(odd) {
+  //  background: red;
+  //}
+}
+
+.item-icon {
+  width: 50px;
+
+}
+
+.item-text {
+  font-size: 2em;
+  margin: 0 20px;
+}

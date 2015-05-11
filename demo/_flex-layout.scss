@@ -1,0 +1,341 @@
+@mixin flexbox() {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flexbox-vertical {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-box-flex-direction: column;
+  -webkit-box-orient: vertical;
+}
+
+@mixin flexbox-vertical-reverse {
+  flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  -webkit-box-flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+}
+
+@mixin flexbox-horizontal {
+  -webkit-box-flex-direction: row;
+  -moz-box-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+@mixin flexbox-fill {
+  -ms-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-box-flex: 1.0;
+}
+
+@mixin flexbox-align-right {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@mixin flexbox-align-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flexbox-align-left {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+@mixin flexbox-align-middle {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin flexbox-align-top {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@mixin flexbox-align-bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.flexbox-left {
+  @include flexbox;
+  @include flexbox-horizontal;
+  @include flexbox-align-left;
+}
+
+.flexbox-right {
+  @include flexbox;
+  @include flexbox-horizontal;
+  @include flexbox-align-right;
+}
+
+.flexbox-center {
+  @include flexbox;
+  @include flexbox-horizontal;
+  @include flexbox-align-center;
+}
+
+.flexbox-vertical {
+  @include flexbox;
+  @include flexbox-vertical;
+  @include flexbox-align-center;
+}
+
+.flexbox-top {
+  @include flexbox-align-top;
+}
+
+.flexbox-bottom {
+  @include flexbox-align-bottom;
+}
+
+.flex {
+  @include flexbox-fill;
+}
+
+@mixin flexbox() {
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flexbox-vertical {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-box-flex-direction: column;
+  -webkit-box-orient: vertical;
+}
+
+@mixin flexbox-vertical-reverse {
+  flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  -webkit-box-flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+}
+
+@mixin flexbox-horizontal {
+  -webkit-box-flex-direction: row;
+  -moz-box-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+@mixin flexbox-fill {
+  -ms-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-box-flex: 1.0;
+}
+
+@mixin flexbox-align-right {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@mixin flexbox-align-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flexbox-align-left {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+@mixin flexbox-align-middle {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin flexbox-align-top {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+@mixin flexbox-align-bottom {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.flexbox-left {
+  @include flexbox;
+  @include flexbox-horizontal;
+  @include flexbox-align-left;
+}
+
+.flexbox-right {
+  @include flexbox;
+  @include flexbox-horizontal;
+  @include flexbox-align-right;
+}
+
+.flexbox-center {
+  @include flexbox;
+  @include flexbox-horizontal;
+  @include flexbox-align-center;
+}
+
+.flexbox-vertical {
+  @include flexbox;
+  @include flexbox-vertical;
+  @include flexbox-align-center;
+}
+
+.flexbox-top {
+  @include flexbox-align-top;
+}
+
+.flexbox-bottom {
+  @include flexbox-align-bottom;
+}
+
+.flex {
+  @include flexbox-fill;
+}
+
+h-flex,
+.h-flex {
+  @include flexbox;
+  @include flexbox-horizontal;
+}
+
+v-flex,
+.v-flex {
+  @include flexbox;
+  @include flexbox-vertical;
+}
+
+.flex-header {
+  display: block;
+  @include flexbox;
+  @include flexbox-vertical;
+
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+
+  width: 100%;
+}
+
+.flex-footer {
+  display: block;
+  @include flexbox;
+  @include flexbox-horizontal;
+
+  -ms-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+
+  width: 100%;
+}
+
+.flex-body {
+  display: block;
+  @include flexbox-fill;
+  @include flexbox;
+  @include flexbox-vertical;
+  width: 100%;
+  position: relative;
+
+  .full-size-container {
+    display: block;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  //&.scrollable {
+  // display: block;
+  // width: 100%;
+  // height: 0;
+  // overflow: auto;
+  //}
+}
+
+.flex-page {
+  display: block;
+  @include flexbox;
+  @include flexbox-vertical;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.flex-stretch {
+  align-items: stretch;
+}
