@@ -1,6 +1,10 @@
 {
-  "name": "transtions",
+  "name": "ng-fragments",
   "version": "0.1",
+  "main": [
+    "./build/css/ngFragments.css",
+    "./duild/js/ngFragments.js"
+  ],
   "authors": [
     "riana <r.ralambo@gmail.com>"
   ],
