@@ -16,9 +16,9 @@
 
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="styles/ngFragments.css"/>
-    <link rel="stylesheet" href="demo/demo.css"/>
-    <!--<link rel="stylesheet" href="build/css/ngFragments.css"/>-->
-    <!--<link rel="stylesheet" href="build/css/demo.css"/>-->
+    <!--<link rel="stylesheet" href="demo/demo.css"/>-->
+    <link rel="stylesheet" href="build/css/ngFragments.css"/>
+    <link rel="stylesheet" href="build/css/demo.css"/>
 </head>
 <body >
 
@@ -31,7 +31,7 @@
                 <a hero-id="icon" ng-click="ctrl.selectItem(item)"
                    hero hero-source="'hero_' + item.id" hero-push="'DetailView'"
                    hero-container="ListHeroContainer">
-                    <img src="demo/res/profile-default.png" class="item-icon hero" hero-id="icon" alt=""/>
+                    <img src="res/profile-default.png" class="item-icon hero" hero-id="icon" alt=""/>
                 </a>
                 <span class="flex small-text item-text hero" hero-id="txt">{{item.label}}</span>
             </div>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="flexbox-center">
-            <img src="demo/res/profile-default.png" class="detail-icon hero" hero-id="icon" alt=""/>
+            <img src="res/profile-default.png" class="detail-icon hero" hero-id="icon" alt=""/>
         </div>
         <div class="detail-text">
             <p>
@@ -70,7 +70,7 @@
         <div class="list-item" ng-repeat="item in ctrl.items">
             <div class="paper-row h-flex">
                 <a ng-click="ctrl.selectItem(item)" slide-push="'SlideDetailsView'" slide-direction="'left'">
-                    <img src="demo/res/profile-default.png" class="item-icon" alt=""/>
+                    <img src="res/profile-default.png" class="item-icon" alt=""/>
                 </a>
                 <span class="flex small-text item-text">{{item.label}}</span>
             </div>
@@ -86,7 +86,7 @@
         </div>
 
         <div class="flexbox-center">
-            <img src="demo/res/profile-default.png" class="detail-icon" alt=""/>
+            <img src="res/profile-default.png" class="detail-icon" alt=""/>
         </div>
         <div class="detail-text">
             <p>
@@ -104,7 +104,7 @@
 <script src="bower_components/velocity/velocity.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="js/app.js"></script>
-<!--<script src="build/js/ngFragments.js"></script>-->
-<!--<script src="build/js/demo.js"></script>-->
+<!--<script src="js/app.js"></script>-->
+<script src="build/js/ngFragments.js"></script>
+<script src="build/js/demo.js"></script>
 </html>
