@@ -3,9 +3,13 @@
 
 #Demo
 
+## Hero transition
 
 ![Hero Transition](https://github.com/riana/ng-fragments/raw/master/res/ListHero.gif)
 
+## Slide transition
+
+![Hero Transition](https://github.com/riana/ng-fragments/raw/master/res/ListSlide.gif)
 
 
 #Install
