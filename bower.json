@@ -5,9 +5,6 @@
     "./build/css/ngFragments.css",
     "./duild/js/ngFragments.js"
   ],
-  "authors": [
-    "riana <r.ralambo@gmail.com>"
-  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
