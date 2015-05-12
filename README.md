@@ -1,7 +1,4 @@
-#Features
-
-
-#Demo
+#Demos
 
 ## Hero transition
 
