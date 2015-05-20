@@ -4,6 +4,7 @@
 
 
     /// <reference path='../typings/_all.ts' />
+    /// <reference path="DraggableFragment.ts"/>
     /// <reference path='HeroDirective.ts' />
     /// <reference path='HeroTransition.ts' />
     /// <reference path='SlideDirective.ts' />
@@ -13,7 +14,7 @@
 
 module ngFragments {
 
-    angular.module('ngFragments', [])
+    angular.module('ngFragments', ['ngFragmentsDnd'])
         .directive('hero', HeroDirective)
         .directive('slidePush', SlideDirective)
         .directive('ngFragmentContainer', FragmentContainerDirective);
